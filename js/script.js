@@ -23,21 +23,20 @@ function extractJSON() {
 const iconsJSON = extractJSON()
 
 function forceDownload(url, fileName) {
-
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", url, true);
-    xhr.responseType = "blob";
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", url, true)
+    xhr.responseType = "blob"
     xhr.onload = function () {
-        var urlCreator = window.URL || window.webkitURL;
-        var imageUrl = urlCreator.createObjectURL(this.response);
-        var tag = document.createElement('a');
-        tag.href = imageUrl;
-        tag.download = fileName;
-        document.body.appendChild(tag);
-        tag.click();
-        document.body.removeChild(tag);
+        const urlCreator = window.URL || window.webkitURL;
+        const imageUrl = urlCreator.createObjectURL(this.response);
+        const tag = document.createElement('a')
+        tag.href = imageUrl
+        tag.download = fileName
+        document.body.appendChild(tag)
+        tag.click()
+        document.body.removeChild(tag)
     }
-    xhr.send();
+    xhr.send()
 }
 
 
@@ -45,8 +44,26 @@ function forceDownload(url, fileName) {
 
 let iconsData = []
 let currentSelectedPage = 0
-let itemsPerPage = 96
-let numberOfPages = 58
+const itemsPerPage = 96
+const numberOfPages = 58
+const sortOptions = {
+    isRegular: false,
+    isBold: false,
+    isSolid: false,
+    isStraight: false,
+    isRounded: false,
+    isBrand: false
+}
+
+function areAllSortOptionsDisabled() {
+    let enabledSortOptions = 0
+    sortOptions.forEach(item => {
+        if (item == true) {
+            enabledSortOptions++
+        }
+    })
+    return (enabledSortOptions == Object.keys(sortOptions).length)
+}
 
 function getIconData() {
     $.getJSON("./json/icons.json", function (iconsJSON) {
@@ -101,16 +118,23 @@ function setButtonsListeners() {
         currentSelectedPage = numberOfPages - 1
         populateList(currentSelectedPage)
     })
+    $("#search-button").click(function () {
+
+    })
+    $("#search-close-button").click(function () {
+        $("#search-field")
+            .val("")
+    })
 }
 setButtonsListeners()
 
 
 function populateList(pageIndex) {
 
-    $("html, body").animate({ scrollTop: $(document).height() }, 1000);
+    $("html, body").animate({ scrollTop: $(document).height() }, 1000)
 
     $("#pagination-page")
-        .val(pageIndex + 1) 
+        .val(pageIndex + 1)
 
     $(".uicons--results")
         .children()
