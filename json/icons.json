@@ -1,6 +1,5 @@
 {
-    "page0": [
-        {
+    "data": [{
             "data_track_arguments": "ga, event, uicons, rounded-regular, home",
             "data_id": "3917033",
             "data_name": "home",
@@ -1055,9 +1054,7 @@
             "data_weight": "regular",
             "data_prefix": "rr",
             "data_class": "fi-rr-address-book"
-        }
-    ],
-    "page1": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, straight-regular, search",
             "data_id": "3917061",
@@ -2113,9 +2110,7 @@
             "data_weight": "regular",
             "data_prefix": "rr",
             "data_class": "fi-rr-mode-portrait"
-        }
-    ],
-    "page2": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, rounded-bold, calendar",
             "data_id": "3917262",
@@ -3171,9 +3166,7 @@
             "data_weight": "solid",
             "data_prefix": "sr",
             "data_class": "fi-sr-search"
-        }
-    ],
-    "page3": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, rounded-regular, palette",
             "data_id": "3917248",
@@ -4229,9 +4222,7 @@
             "data_weight": "solid",
             "data_prefix": "sr",
             "data_class": "fi-sr-portrait"
-        }
-    ],
-    "page4": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, straight-regular, comments",
             "data_id": "5074600",
@@ -5287,9 +5278,7 @@
             "data_weight": "bold",
             "data_prefix": "br",
             "data_class": "fi-br-cross-circle"
-        }
-    ],
-    "page5": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, rounded-regular, cloud-download",
             "data_id": "3914419",
@@ -6345,9 +6334,7 @@
             "data_weight": "regular",
             "data_prefix": "rs",
             "data_class": "fi-rs-e-learning"
-        }
-    ],
-    "page6": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, rounded-solid, gamepad",
             "data_id": "5529135",
@@ -7403,9 +7390,7 @@
             "data_weight": "bold",
             "data_prefix": "br",
             "data_class": "fi-br-address-book"
-        }
-    ],
-    "page7": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, brands-solid, spotify",
             "data_id": "6424102",
@@ -8461,9 +8446,7 @@
             "data_weight": "bold",
             "data_prefix": "bs",
             "data_class": "fi-bs-globe"
-        }
-    ],
-    "page8": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, rounded-regular, rewind",
             "data_id": "3917578",
@@ -9519,9 +9502,7 @@
             "data_weight": "solid",
             "data_prefix": "sr",
             "data_class": "fi-sr-arrow-small-left"
-        }
-    ],
-    "page9": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, rounded-solid, apps-sort",
             "data_id": "3917684",
@@ -10577,9 +10558,7 @@
             "data_weight": "bold",
             "data_prefix": "bs",
             "data_class": "fi-bs-users"
-        }
-    ],
-    "page10": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, straight-regular, undo",
             "data_id": "3917399",
@@ -11635,9 +11614,7 @@
             "data_weight": "regular",
             "data_prefix": "rs",
             "data_class": "fi-rs-school"
-        }
-    ],
-    "page11": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, straight-solid, e-learning",
             "data_id": "3914877",
@@ -12693,9 +12670,7 @@
             "data_weight": "regular",
             "data_prefix": "rr",
             "data_class": "fi-rr-ship"
-        }
-    ],
-    "page12": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, straight-regular, envelope-open",
             "data_id": "5074457",
@@ -13751,9 +13726,7 @@
             "data_weight": "regular",
             "data_prefix": "rr",
             "data_class": "fi-rr-infinity"
-        }
-    ],
-    "page13": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, straight-solid, alarm-clock",
             "data_id": "3914623",
@@ -14809,9 +14782,7 @@
             "data_weight": "solid",
             "data_prefix": "sr",
             "data_class": "fi-sr-shuffle"
-        }
-    ],
-    "page14": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, rounded-regular, file-ai",
             "data_id": "3917466",
@@ -15867,9 +15838,7 @@
             "data_weight": "solid",
             "data_prefix": "sr",
             "data_class": "fi-sr-apple-whole"
-        }
-    ],
-    "page15": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, rounded-solid, truck-side",
             "data_id": "5074701",
@@ -16925,9 +16894,7 @@
             "data_weight": "regular",
             "data_prefix": "rs",
             "data_class": "fi-rs-caret-right"
-        }
-    ],
-    "page16": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, rounded-bold, caret-left",
             "data_id": "3916951",
@@ -17983,9 +17950,7 @@
             "data_weight": "regular",
             "data_prefix": "rr",
             "data_class": "fi-rr-turkey"
-        }
-    ],
-    "page17": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, rounded-solid, time-twenty-four",
             "data_id": "3914124",
@@ -19041,9 +19006,7 @@
             "data_weight": "bold",
             "data_prefix": "br",
             "data_class": "fi-br-steering-wheel"
-        }
-    ],
-    "page18": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, straight-regular, feather",
             "data_id": "3914878",
@@ -20099,9 +20062,7 @@
             "data_weight": "solid",
             "data_prefix": "sr",
             "data_class": "fi-sr-euro"
-        }
-    ],
-    "page19": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, rounded-solid, ambulance",
             "data_id": "3914688",
@@ -21157,9 +21118,7 @@
             "data_weight": "regular",
             "data_prefix": "rr",
             "data_class": "fi-rr-arrows-h"
-        }
-    ],
-    "page20": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, straight-bold, chevron-double-down",
             "data_id": "6407452",
@@ -22215,9 +22174,7 @@
             "data_weight": "bold",
             "data_prefix": "bs",
             "data_class": "fi-bs-video-camera"
-        }
-    ],
-    "page21": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, straight-solid, menu-dots",
             "data_id": "3917311",
@@ -23273,9 +23230,7 @@
             "data_weight": "regular",
             "data_prefix": "rr",
             "data_class": "fi-rr-dice-three"
-        }
-    ],
-    "page22": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, rounded-bold, hiking",
             "data_id": "6627873",
@@ -24331,9 +24286,7 @@
             "data_weight": "regular",
             "data_prefix": "rs",
             "data_class": "fi-rs-medicine"
-        }
-    ],
-    "page23": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, straight-regular, scale",
             "data_id": "3914837",
@@ -25389,9 +25342,7 @@
             "data_weight": "regular",
             "data_prefix": "rr",
             "data_class": "fi-rr-ferris-wheel"
-        }
-    ],
-    "page24": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, straight-regular, grin-alt",
             "data_id": "6275769",
@@ -26447,9 +26398,7 @@
             "data_weight": "regular",
             "data_prefix": "rs",
             "data_class": "fi-rs-picnic"
-        }
-    ],
-    "page25": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, rounded-regular, pan",
             "data_id": "6349739",
@@ -27505,9 +27454,7 @@
             "data_weight": "bold",
             "data_prefix": "br",
             "data_class": "fi-br-tool-marquee"
-        }
-    ],
-    "page26": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, rounded-solid, sword",
             "data_id": "3914354",
@@ -28563,9 +28510,7 @@
             "data_weight": "regular",
             "data_prefix": "rr",
             "data_class": "fi-rr-knife"
-        }
-    ],
-    "page27": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, rounded-bold, popcorn",
             "data_id": "6349567",
@@ -29621,9 +29566,7 @@
             "data_weight": "solid",
             "data_prefix": "ss",
             "data_class": "fi-ss-coffee"
-        }
-    ],
-    "page28": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, straight-regular, envelope-marker",
             "data_id": "5074502",
@@ -30679,9 +30622,7 @@
             "data_weight": "bold",
             "data_prefix": "bs",
             "data_class": "fi-bs-eclipse-alt"
-        }
-    ],
-    "page29": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, rounded-bold, eclipse",
             "data_id": "6853945",
@@ -31737,9 +31678,7 @@
             "data_weight": "bold",
             "data_prefix": "br",
             "data_class": "fi-br-paint-brush"
-        }
-    ],
-    "page30": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, rounded-bold, shield-interrogation",
             "data_id": "3914190",
@@ -32795,9 +32734,7 @@
             "data_weight": "regular",
             "data_prefix": "rs",
             "data_class": "fi-rs-map-marker-minus"
-        }
-    ],
-    "page31": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, straight-bold, envelope-plus",
             "data_id": "5074104",
@@ -33853,9 +33790,7 @@
             "data_weight": "regular",
             "data_prefix": "rs",
             "data_class": "fi-rs-dizzy"
-        }
-    ],
-    "page32": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, rounded-solid, broccoli",
             "data_id": "6349007",
@@ -34911,9 +34846,7 @@
             "data_weight": "bold",
             "data_prefix": "bs",
             "data_class": "fi-bs-wheelchair"
-        }
-    ],
-    "page33": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, rounded-bold, angry",
             "data_id": "6275560",
@@ -35969,9 +35902,7 @@
             "data_weight": "bold",
             "data_prefix": "br",
             "data_class": "fi-br-taxi"
-        }
-    ],
-    "page34": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, straight-regular, mug-alt",
             "data_id": "5074786",
@@ -37027,9 +36958,7 @@
             "data_weight": "bold",
             "data_prefix": "br",
             "data_class": "fi-br-ftp"
-        }
-    ],
-    "page35": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, rounded-bold, basketball",
             "data_id": "3914130",
@@ -38085,9 +38014,7 @@
             "data_weight": "bold",
             "data_prefix": "bs",
             "data_class": "fi-bs-car-building"
-        }
-    ],
-    "page36": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, straight-solid, cars",
             "data_id": "6955467",
@@ -39143,9 +39070,7 @@
             "data_weight": "regular",
             "data_prefix": "rs",
             "data_class": "fi-rs-sandwich"
-        }
-    ],
-    "page37": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, straight-regular, shrimp",
             "data_id": "6349840",
@@ -40201,9 +40126,7 @@
             "data_weight": "bold",
             "data_prefix": "bs",
             "data_class": "fi-bs-tennis"
-        }
-    ],
-    "page38": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, straight-regular, reflect",
             "data_id": "3914949",
@@ -41259,9 +41182,7 @@
             "data_weight": "bold",
             "data_prefix": "br",
             "data_class": "fi-br-chess-knight-alt"
-        }
-    ],
-    "page39": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, rounded-solid, chess",
             "data_id": "6627695",
@@ -42317,9 +42238,7 @@
             "data_weight": "solid",
             "data_prefix": "ss",
             "data_class": "fi-ss-envelope-ban"
-        }
-    ],
-    "page40": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, straight-regular, ship-side",
             "data_id": "5074227",
@@ -43375,9 +43294,7 @@
             "data_weight": "regular",
             "data_prefix": "rs",
             "data_class": "fi-rs-chess-rook"
-        }
-    ],
-    "page41": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, rounded-solid, golf-ball",
             "data_id": "6627798",
@@ -44433,9 +44350,7 @@
             "data_weight": "bold",
             "data_prefix": "bs",
             "data_class": "fi-bs-phone-pause"
-        }
-    ],
-    "page42": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, straight-solid, phone-slash",
             "data_id": "5074162",
@@ -45491,9 +45406,7 @@
             "data_weight": "solid",
             "data_prefix": "ss",
             "data_class": "fi-ss-level-up"
-        }
-    ],
-    "page43": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, brands-solid, marriott international",
             "data_id": "6422139",
@@ -46549,9 +46462,7 @@
             "data_weight": "solid",
             "data_prefix": "ss",
             "data_class": "fi-ss-tachometer-fastest"
-        }
-    ],
-    "page44": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, rounded-bold, car-battery",
             "data_id": "6955577",
@@ -47607,9 +47518,7 @@
             "data_weight": "regular",
             "data_prefix": "rs",
             "data_class": "fi-rs-mars-double"
-        }
-    ],
-    "page45": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, straight-bold, happy",
             "data_id": "5527860",
@@ -48665,9 +48574,7 @@
             "data_weight": "solid",
             "data_prefix": "ss",
             "data_class": "fi-ss-radish"
-        }
-    ],
-    "page46": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, rounded-solid, sauce",
             "data_id": "6349756",
@@ -49723,9 +49630,7 @@
             "data_weight": "solid",
             "data_prefix": "ss",
             "data_class": "fi-ss-temperature-frigid"
-        }
-    ],
-    "page47": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, straight-bold, temperature-down",
             "data_id": "6854006",
@@ -50781,9 +50686,7 @@
             "data_weight": "solid",
             "data_prefix": "ss",
             "data_class": "fi-ss-baseball"
-        }
-    ],
-    "page48": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, straight-bold, ping-pong",
             "data_id": "3914975",
@@ -51839,9 +51742,7 @@
             "data_weight": "regular",
             "data_prefix": "rs",
             "data_class": "fi-rs-egg"
-        }
-    ],
-    "page49": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, rounded-solid, garlic",
             "data_id": "6349199",
@@ -52897,9 +52798,7 @@
             "data_weight": "regular",
             "data_prefix": "rs",
             "data_class": "fi-rs-dice-d10"
-        }
-    ],
-    "page50": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, straight-solid, curling",
             "data_id": "6627857",
@@ -53955,9 +53854,7 @@
             "data_weight": "bold",
             "data_prefix": "bs",
             "data_class": "fi-bs-truck-monster"
-        }
-    ],
-    "page51": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, straight-regular, starfighter",
             "data_id": "6955702",
@@ -55013,9 +54910,7 @@
             "data_weight": "bold",
             "data_prefix": "bs",
             "data_class": "fi-bs-basketball"
-        }
-    ],
-    "page52": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, straight-solid, golf",
             "data_id": "3914950",
@@ -56071,9 +55966,7 @@
             "data_weight": "bold",
             "data_prefix": "bs",
             "data_class": "fi-bs-candy"
-        }
-    ],
-    "page53": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, straight-bold, canned-food",
             "data_id": "6349069",
@@ -57129,9 +57022,7 @@
             "data_weight": "bold",
             "data_prefix": "bs",
             "data_class": "fi-bs-chess-rook-alt"
-        }
-    ],
-    "page54": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, rounded-solid, sledding",
             "data_id": "6628003",
@@ -58187,9 +58078,7 @@
             "data_weight": "bold",
             "data_prefix": "br",
             "data_class": "fi-br-ski-lift"
-        }
-    ],
-    "page55": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, rounded-solid, caravan-alt",
             "data_id": "6955807",
@@ -59245,9 +59134,7 @@
             "data_weight": "bold",
             "data_prefix": "bs",
             "data_class": "fi-bs-arrow-alt-left"
-        }
-    ],
-    "page56": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, straight-solid, angle-double-small-down",
             "data_id": "7434990",
@@ -60303,9 +60190,7 @@
             "data_weight": "solid",
             "data_prefix": "ss",
             "data_class": "fi-ss-calendar-lines"
-        }
-    ],
-    "page57": [
+        },
         {
             "data_track_arguments": "ga, event, uicons, straight-regular, calendar-plus",
             "data_id": "7546742",
