@@ -272,7 +272,7 @@ function populateList(pageIndex) {
                     .attr('data-class', iconData.data_class)
                     .append(
                         $('<img>')
-                        .attr('src', '../img/' + iconData.data_id + '.svg')
+                        .attr('src', 'https://raw.githubusercontent.com/slaviboy/Compose-Icons-Site/master/img/' + iconData.data_id + '.svg')
                         .attr('class', 'block lzy lazyload--done')
                         .attr('width', '26')
                     )
