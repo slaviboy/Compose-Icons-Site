@@ -8,6 +8,18 @@ $.fn.enterKey = function(fnc) {
         })
     })
 }
+
+$.fn.invisible = function() {
+    return this.each(function() {
+        $(this).css("display", "none");
+    });
+};
+$.fn.visible = function() {
+    return this.each(function() {
+        $(this).css("display", "inline");
+    });
+};
+
 const iconObjects = []
 
 function extractJSON() {
@@ -49,7 +61,9 @@ function forceDownload(url, fileName) {
     xhr.send()
 }
 
-
+$("body").click(function(evt) {
+    evt.preventDefault()
+})
 
 
 let iconsData = []
@@ -170,6 +184,11 @@ function setButtonsListeners() {
         sortOptions.isBrands = this.checked
         updateIcons()
     })
+    $("#close-icon-info").click(function() {
+        $("#icon-info").invisible()
+    })
+
+
 }
 setButtonsListeners()
 
@@ -238,15 +257,18 @@ function getSortedIconsData() {
 
 function populateList(pageIndex) {
 
-    //$("html, body").animate({ scrollTop: $(document).height() }, 1000)
+    // tab -> &emsp;
+    // empty space -> &ensp;
+    // pcr-app visible
+    // $("html, body").animate({ scrollTop: $(document).height() }, 1000)
 
     $("#pagination-page")
         .val(pageIndex + 1)
 
     $(".uicons--results")
         .children()
+        .not("#icon-info")
         .remove()
-
 
     let start = pageIndex * itemsPerPage
     let end = (pageIndex + 1) * itemsPerPage
@@ -257,6 +279,10 @@ function populateList(pageIndex) {
                 $('<li>')
                 .attr('id', 'result-' + (i - start))
                 .addClass("fadein")
+                .click(function() {
+                    let i = parseInt($(this).attr('id').replace(/^\D+/g, ''))
+                    $("#icon-info").visible()
+                })
                 .append(
                     $('<a>')
                     .attr('href', '#')
