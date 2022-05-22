@@ -1,6 +1,6 @@
-$.fn.enterKey = function(fnc) {
-    return this.each(function() {
-        $(this).keypress(function(ev) {
+$.fn.enterKey = function (fnc) {
+    return this.each(function () {
+        $(this).keypress(function (ev) {
             var keycode = (ev.keyCode ? ev.keyCode : ev.which);
             if (keycode == '13') {
                 fnc.call(this, ev);
@@ -9,13 +9,13 @@ $.fn.enterKey = function(fnc) {
     })
 }
 
-$.fn.invisible = function() {
-    return this.each(function() {
+$.fn.invisible = function () {
+    return this.each(function () {
         $(this).css("display", "none");
     });
 };
-$.fn.visible = function() {
-    return this.each(function() {
+$.fn.visible = function () {
+    return this.each(function () {
         $(this).css("display", "inline");
     });
 };
@@ -26,7 +26,7 @@ function extractJSON() {
     $(".uicons--results")
         .children()
         .find("a")
-        .each(function(index) {
+        .each(function (index) {
             iconObjects.push({
                 data_track_arguments: $(this).attr("data-track-arguments"),
                 data_id: $(this).attr("data-id"),
@@ -48,7 +48,7 @@ function forceDownload(url, fileName) {
     const xhr = new XMLHttpRequest();
     xhr.open("GET", url, true)
     xhr.responseType = "blob"
-    xhr.onload = function() {
+    xhr.onload = function () {
         const urlCreator = window.URL || window.webkitURL;
         const imageUrl = urlCreator.createObjectURL(this.response);
         const tag = document.createElement('a')
@@ -61,7 +61,7 @@ function forceDownload(url, fileName) {
     xhr.send()
 }
 
-$("body").click(function(evt) {
+$("body").click(function (evt) {
     evt.preventDefault()
 })
 
@@ -92,7 +92,7 @@ function areAllSortOptionsDisabled() {
 }
 
 function getIconData() {
-    $.getJSON("./json/icons.json", function(iconsJSON) {
+    $.getJSON("./json/icons.json", function (iconsJSON) {
         for (const key in iconsJSON) {
             iconsData = iconsJSON.data
         }
@@ -110,13 +110,13 @@ function setSelectedPage(page) {
 }
 
 function setButtonsListeners() {
-    $("#download").click(function() {
+    $("#download").click(function () {
 
         const svgURLs = []
         $(".uicons--results")
             .children()
             .find("a")
-            .each(function(index) {
+            .each(function (index) {
                 svgURLs.push({
                     data_id: $(this).attr("data-id"),
                     data_svg: $(this).attr("data-svg")
@@ -130,61 +130,61 @@ function setButtonsListeners() {
             )
         })
     })
-    $("#pagination-page").keyup(function() {
+    $("#pagination-page").keyup(function () {
         const page = $(this).val() - 1
         setSelectedPage(page)
     })
-    $("#prevButton").click(function() {
+    $("#prevButton").click(function () {
         setSelectedPage(currentSelectedPage - 1)
     })
-    $("#nextButton").click(function() {
+    $("#nextButton").click(function () {
         setSelectedPage(currentSelectedPage + 1)
     })
-    $("#firstButton").click(function() {
+    $("#firstButton").click(function () {
         setSelectedPage(0)
     })
-    $("#lastButton").click(function() {
+    $("#lastButton").click(function () {
         setSelectedPage(numberOfPages - 1)
     })
-    $("#search-button").click(function() {
+    $("#search-button").click(function () {
         sortText = $("#search-field").val()
         updateIcons()
     })
-    $("#search-field").enterKey(function() {
+    $("#search-field").enterKey(function () {
         sortText = $("#search-field").val()
         updateIcons()
     })
-    $("#search-close-button").click(function() {
+    $("#search-close-button").click(function () {
         $("#search-field")
             .val("")
         sortText = $("#search-field").val()
         updateIcons()
     })
-    $("#weight-regular").click(function() {
+    $("#weight-regular").click(function () {
         sortOptions.isRegular = this.checked
         updateIcons()
     })
-    $("#weight-bold").click(function() {
+    $("#weight-bold").click(function () {
         sortOptions.isBold = this.checked
         updateIcons()
     })
-    $("#weight-solid").click(function() {
+    $("#weight-solid").click(function () {
         sortOptions.isSolid = this.checked
         updateIcons()
     })
-    $("#corner-straight").click(function() {
+    $("#corner-straight").click(function () {
         sortOptions.isStraight = this.checked
         updateIcons()
     })
-    $("#corner-rounded").click(function() {
+    $("#corner-rounded").click(function () {
         sortOptions.isRounded = this.checked
         updateIcons()
     })
-    $("#brands").click(function() {
+    $("#brands").click(function () {
         sortOptions.isBrands = this.checked
         updateIcons()
     })
-    $("#close-icon-info").click(function() {
+    $("#close-icon-info").click(function () {
         $("#icon-info").invisible()
     })
 
@@ -218,16 +218,16 @@ function getSortedIconsData() {
         for (i = 0; i < iconsData.length; i++) {
             const iconData = iconsData[i]
             const iconMatchSortOptions = (
-                    (allWeightSortOptionsDisabled || (
-                        (sortOptions.isRegular == (iconData.data_weight == "regular") && sortOptions.isRegular) ||
-                        (sortOptions.isBold == (iconData.data_weight == "bold") && sortOptions.isBold) ||
-                        (sortOptions.isSolid == (iconData.data_weight == "solid") && sortOptions.isSolid)
-                    )) &&
-                    (allCornerSortOptionsDisabled || (
-                        (sortOptions.isStraight == (iconData.data_corner == "straight") && sortOptions.isStraight) ||
-                        (sortOptions.isRounded == (iconData.data_corner == "rounded") && sortOptions.isRounded)
-                    ))
-                ) &&
+                (allWeightSortOptionsDisabled || (
+                    (sortOptions.isRegular == (iconData.data_weight == "regular") && sortOptions.isRegular) ||
+                    (sortOptions.isBold == (iconData.data_weight == "bold") && sortOptions.isBold) ||
+                    (sortOptions.isSolid == (iconData.data_weight == "solid") && sortOptions.isSolid)
+                )) &&
+                (allCornerSortOptionsDisabled || (
+                    (sortOptions.isStraight == (iconData.data_corner == "straight") && sortOptions.isStraight) ||
+                    (sortOptions.isRounded == (iconData.data_corner == "rounded") && sortOptions.isRounded)
+                ))
+            ) &&
                 (!sortOptions.isBrands || (sortOptions.isBrands == (iconData.data_prefix == "brands") && sortOptions.isBrands))
 
             if (iconMatchSortOptions) {
@@ -277,32 +277,38 @@ function populateList(pageIndex) {
             const iconData = sortedIconsData[i]
             $(".uicons--results").append(
                 $('<li>')
-                .attr('id', 'result-' + (i - start))
-                .addClass("fadein")
-                .click(function() {
-                    let i = parseInt($(this).attr('id').replace(/^\D+/g, ''))
-                    $("#icon-info").visible()
-                })
-                .append(
-                    $('<a>')
-                    .attr('href', '#')
-                    .attr('class', 'track')
-                    .attr('data-track-arguments', iconData.data_track_arguments)
-                    .attr('data-id', iconData.data_id)
-                    .attr('data-name', iconData.data_name)
-                    .attr('data-tags', iconData.data_tags)
-                    .attr('data-teamid', iconData.data_teamid)
-                    .attr('data-corner', iconData.data_corner)
-                    .attr('data-weight', iconData.data_weight)
-                    .attr('data-prefix', iconData.data_prefix)
-                    .attr('data-class', iconData.data_class)
+                    .attr('id', 'result-' + (i - start))
+                    .addClass("fadein")
+                    .click(function () {
+                        const j = parseInt($(this).attr('id').replace(/^\D+/g, ''))
+                        const clickedIconData = sortedIconsData[j]
+                        $("#icon-info")
+                            .visible()
+                        $("#icon-type")
+                            .html(clickedIconData.data_name.toUpperCase())
+                        $("#uicons__detail-img")
+                            .attr('src', 'https://raw.githubusercontent.com/slaviboy/Compose-Icons-Site/master/img/' + clickedIconData.data_id + '.svg')
+                    })
                     .append(
-                        $('<img>')
-                        .attr('src', 'https://raw.githubusercontent.com/slaviboy/Compose-Icons-Site/master/img/' + iconData.data_id + '.svg')
-                        .attr('class', 'block lzy lazyload--done')
-                        .attr('width', '26')
+                        $('<a>')
+                            .attr('href', '#')
+                            .attr('class', 'track')
+                            .attr('data-track-arguments', iconData.data_track_arguments)
+                            .attr('data-id', iconData.data_id)
+                            .attr('data-name', iconData.data_name)
+                            .attr('data-tags', iconData.data_tags)
+                            .attr('data-teamid', iconData.data_teamid)
+                            .attr('data-corner', iconData.data_corner)
+                            .attr('data-weight', iconData.data_weight)
+                            .attr('data-prefix', iconData.data_prefix)
+                            .attr('data-class', iconData.data_class)
+                            .append(
+                                $('<img>')
+                                    .attr('src', 'https://raw.githubusercontent.com/slaviboy/Compose-Icons-Site/master/img/' + iconData.data_id + '.svg')
+                                    .attr('class', 'block lzy lazyload--done')
+                                    .attr('width', '26')
+                            )
                     )
-                )
             )
         }
     }
