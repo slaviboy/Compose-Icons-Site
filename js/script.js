@@ -16,10 +16,11 @@ $.fn.invisible = function () {
 };
 $.fn.visible = function () {
     return this.each(function () {
-        $(this).css("display", "inline");
+        $(this).css("display", "flex");
     });
 };
 
+const BASE_URL = 'https://raw.githubusercontent.com/slaviboy/Compose-Icons-Site/master/img/'
 const iconObjects = []
 
 function extractJSON() {
@@ -61,7 +62,7 @@ function forceDownload(url, fileName) {
     xhr.send()
 }
 
-$("body").click(function (evt) {
+$("a").click(function (evt) {
     evt.preventDefault()
 })
 
@@ -80,6 +81,7 @@ const sortOptions = {
     isBrands: false
 }
 let sortText = ""
+let clickedIconData = null
 
 function areAllSortOptionsDisabled() {
     let enabledSortOptions = 0
@@ -104,6 +106,8 @@ getIconData()
 
 function setSelectedPage(page) {
     if (page >= 0 && page < numberOfPages) {
+        $("#icon-info")
+            .invisible()
         currentSelectedPage = page
         populateList(currentSelectedPage)
     }
@@ -184,15 +188,15 @@ function setButtonsListeners() {
         sortOptions.isBrands = this.checked
         updateIcons()
     })
-    $("#close-icon-info").click(function () {
-        $("#icon-info").invisible()
-    })
-
-
 }
-setButtonsListeners()
+
+$(document).ready(function () {
+    setButtonsListeners()
+})
 
 function updateIcons() {
+    $("#icon-info")
+        .invisible()
     getSortedIconsData()
     currentSelectedPage = 0
     populateList(currentSelectedPage)
@@ -255,6 +259,92 @@ function getSortedIconsData() {
 
 }
 
+
+function onIconItemClicked(that) {
+
+    const k = parseInt($(that).attr('id').replace(/^\D+/g, ''))
+    clickedIconData = sortedIconsData[k]
+    $("#icon-info")
+        .visible()
+    $("#icon-type")
+        .html(clickedIconData.data_class.replaceAll("-", "_"))
+    $("#uicons__detail-icon-name")
+        .html(capitalizeFirstLetter(clickedIconData.data_name) + " free icon font")
+    $("#uicons__detail-img")
+        .attr('src', BASE_URL + clickedIconData.data_id + '.svg')
+
+    const tags = clickedIconData.data_tags.split(",")
+    $("#tags")
+        .children()
+        .remove()
+    tags.forEach(tag => {
+        $("#tags")
+            .append(
+                $('<li>')
+                    .append(
+                        $('<a>')
+                            .attr('href', '#!')
+                            .attr('class', 'tag--related regular')
+                            .html(tag)
+                    )
+            )
+    })
+
+    const iconInfo = $("#icon-info")
+    $("#icon-info")
+        .remove()
+    iconInfo
+        .insertAfter("#" + $(that).attr('id'))
+
+        
+    $("#close-icon-info").click(function () {
+        $("#icon-info").invisible()
+    })
+    $("#copy").click(function () {
+        copyToClipboard()
+    })
+
+    const similarIconsData = iconsData.filter(checkedIconData =>
+        checkedIconData.data_name == clickedIconData.data_name
+    )
+    if (similarIconsData.length == 6) {
+        $("#similar-icons-text").visible()
+        $("#similar-icons").visible()
+        similarIconsData.forEach((similarIconData, j) => {
+            const iconDom = $(`#similar-icons-${similarIconData.data_prefix}`)
+            const parent = iconDom.parent()
+            if (similarIconData.data_id == clickedIconData.data_id) {
+                parent.addClass("active")
+            } else {
+                parent.removeClass("active")
+            }
+            parent.parent().click(function () {
+                clickedIconData = similarIconData
+                $("#icon-type")
+                    .html(clickedIconData.data_class.replaceAll("-", "_"))
+                $("#uicons__detail-img")
+                    .attr('src', BASE_URL + similarIconData.data_id + '.svg')
+
+                similarIconsData.forEach((otherIconData, j) => {
+                    const iconDom = $(`#similar-icons-${otherIconData.data_prefix}`)
+                    const parent = iconDom.parent()
+                    if (otherIconData.data_id == similarIconData.data_id) {
+                        parent.addClass("active")
+                    } else {
+                        parent.removeClass("active")
+                    }
+                })
+            })
+            iconDom.attr('src', BASE_URL + similarIconsData[j].data_id + '.svg')
+        })
+    }
+    else {
+        $("#similar-icons-text").invisible()
+        $("#similar-icons").invisible()
+    }
+
+}
+
 function populateList(pageIndex) {
 
     // tab -> &emsp;
@@ -277,21 +367,15 @@ function populateList(pageIndex) {
             const iconData = sortedIconsData[i]
             $(".uicons--results").append(
                 $('<li>')
-                    .attr('id', 'result-' + (i - start))
+                    .attr('id', 'result-' + (i))
                     .addClass("fadein")
+                    .unbind('click')
                     .click(function () {
-                        const j = parseInt($(this).attr('id').replace(/^\D+/g, ''))
-                        const clickedIconData = sortedIconsData[j]
-                        $("#icon-info")
-                            .visible()
-                        $("#icon-type")
-                            .html(clickedIconData.data_name.toUpperCase())
-                        $("#uicons__detail-img")
-                            .attr('src', 'https://raw.githubusercontent.com/slaviboy/Compose-Icons-Site/master/img/' + clickedIconData.data_id + '.svg')
+                        onIconItemClicked(this)
                     })
                     .append(
                         $('<a>')
-                            .attr('href', '#')
+                            .attr('href', '#!')
                             .attr('class', 'track')
                             .attr('data-track-arguments', iconData.data_track_arguments)
                             .attr('data-id', iconData.data_id)
@@ -304,7 +388,7 @@ function populateList(pageIndex) {
                             .attr('data-class', iconData.data_class)
                             .append(
                                 $('<img>')
-                                    .attr('src', 'https://raw.githubusercontent.com/slaviboy/Compose-Icons-Site/master/img/' + iconData.data_id + '.svg')
+                                    .attr('src', BASE_URL + iconData.data_id + '.svg')
                                     .attr('class', 'block lzy lazyload--done')
                                     .attr('width', '26')
                             )
@@ -312,4 +396,21 @@ function populateList(pageIndex) {
             )
         }
     }
+}
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function copyToClipboard() {
+    const string = `
+    Icon(
+        modifier = Modifier
+            .width(15.dp)
+            .height(15.dp),
+        type = R.drawable.${clickedIconData.data_class.replaceAll("-", "_")},
+        color = Color(0xFF00FF00)
+    )
+    `
+    navigator.clipboard.writeText(string)
 }
