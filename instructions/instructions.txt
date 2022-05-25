@@ -1,0 +1,44 @@
+1) Go to FlatIcon site https://www.flaticon.com/uicons/
+
+2) Copy the page <ul> inner html from FlatIcon site and replace the <ul> from index.html with copied data
+    <ul class="mg-none uicons--results">
+        <li id="result-0">
+        ...
+    </ul>
+
+3) Save index.html page
+
+4) Show the download button from index.html page by (removing style="display: none;)
+    <button id="download" style="display: none;">Download SVG images</button>
+
+5) Lanch the server using the VS code live server extension
+
+6) Open the server http://127.0.0.1:5500/ from the FIREFOX browser, the other browsers do not allow more that 10 files downloaded at the same time
+
+7) Press the "Download" button and will download all files
+
+8) Open the server http://127.0.0.1:5500/ from the Chrome then open the console and type: iconsData
+
+9) Right click on console object -> "Copy object" (to copy the JSON object data)
+
+10) Do the same for each page (Download all svg icons and the save JSON data)
+    (place the downloaded image inside C:\\Users\\Slaviboy\\Desktop\\img folder)
+
+11) Rename the downloaded svg file by running the python script: rename.py
+    (also from the rename.py script file replace 'previous' and 'new' arrays with extracted names)
+
+12) To extract the previous and new name open Chrome console on the server
+    // get previous names
+    iconsData.map((v, i) => 
+      v.data_id
+    )
+
+    // get new names
+    iconsData.map((v, i) => 
+      v.data_class
+    )
+
+13) Once files are renamed, convert them from SVG to Android Drawable XML using this site
+    https://svg2vector.com/
+
+(If subscription pop-up from the site is download, open console and remove the <app-purchase-promo>...</app-purchase-promo> tag)

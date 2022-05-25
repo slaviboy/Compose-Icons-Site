@@ -29752,7 +29752,7 @@
             "data_corner": "brands",
             "data_weight": "solid",
             "data_prefix": "brands",
-            "data_class": "fi-brands-at&t"
+            "data_class": "fi-brands-at_t"
         },
         {
             "data_track_arguments": "ga, event, uicons, rounded-regular, basketball-hoop",
