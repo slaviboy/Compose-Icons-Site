@@ -460,7 +460,7 @@
 }
 
 .uicons__icons .icon__detail--container .uicons__detail--wrapper .uicons__detail--image img {
-    filter: invert(25%) sepia(53%) saturate(269%) hue-rotate(163deg) brightness(90%) contrast(89%)
+    /* filter: invert(25%) sepia(53%) saturate(269%) hue-rotate(163deg) brightness(90%) contrast(89%) */
 }
 
 .uicons__icons .icon__detail--container .uicons__detail--wrapper .uicons__detail--image .uicon-detail-holder {

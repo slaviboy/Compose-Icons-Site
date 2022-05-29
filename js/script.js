@@ -296,12 +296,16 @@ function onIconItemClicked(that) {
     iconInfo
         .insertAfter("#" + $(that).attr('id'))
 
-        
+
     $("#close-icon-info").click(function () {
         $("#icon-info").invisible()
     })
     $("#copy").click(function () {
         copyToClipboard()
+    })
+
+    $("#uicon-color-picker-wrapper").click(function () {
+        $(".pcr-button").click()
     })
 
     const similarIconsData = iconsData.filter(checkedIconData =>
@@ -402,6 +406,7 @@ function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
+let selectedColor = 'FF000000'
 function copyToClipboard() {
     const string = `
     Icon(
@@ -409,8 +414,46 @@ function copyToClipboard() {
             .width(15.dp)
             .height(15.dp),
         type = R.drawable.${clickedIconData.data_class.replaceAll("-", "_")},
-        color = Color(0xFF00FF00)
+        color = Color(${selectedColor})
     )
     `
     navigator.clipboard.writeText(string)
 }
+
+const pickr = Pickr.create({
+    container: '.uicon-edit-color-picker',
+    el: '.color-picker',
+    theme: 'nano',
+    swatches: [],
+    components: {
+        preview: true,
+        opacity: true,
+        hue: true,
+        interaction: {
+            hex: true,
+            input: true
+        }
+    }
+})
+
+pickr.on('init', instance => {
+    console.log('Event: "init"', instance);
+}).on('change', (color, source, instance) => {
+    const hexa = color.toHEXA()
+    let a = 'FF'
+    if (hexa.length == 4) {
+        a = hexa[3]
+    }
+    selectedColor = "0x" + a + hexa[0] + hexa[1] + hexa[2]
+    selectedColor = selectedColor.toUpperCase()
+    $("#selectedColor").html(selectedColor)
+
+    const rgba = color.toRGBA()
+    const color2 = new Color(rgba[0], rgba[1], rgba[2])
+    const solver = new Solver(color2)
+    const result = solver.solve()
+    $("#uicons__detail-img")
+        .attr('style', result.filter)
+        .css("background-color", "transparent")
+        .css('opacity', rgba[3])
+})

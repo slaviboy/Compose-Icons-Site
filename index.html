@@ -3,11 +3,13 @@
 <head>
 
     <title>Jetpack Compose Icons</title>
+
     <link rel="preload" href="./assets/bobjoll.f8076329de55a608a630d304345d67df.woff2" as="font" crossorigin
         importance="high">
     <link rel="preload" href="./assets/proximanova-bold-webfont.woff2" as="font" crossorigin importance="high">
     <link rel="preload" href="./assets/proximanova-regular-webfont.woff2" as="font" crossorigin importance="high">
     <link rel="preload" href="./assets/proximanova-semibold-webfont.woff2" as="font" crossorigin importance="high">
+    
     <link href="./css/picker.css" rel="stylesheet" type="text/css">
     <link href="./css/uicons.css" rel="stylesheet" type="text/css">
 
@@ -38,6 +40,11 @@
             100% {
                 opacity: 1;
             }
+        }
+ 
+        .pcr-app[data-theme=nano] { 
+            width: 200px;
+            height: 250px;
         }
     </style>
 </head>
@@ -220,71 +227,12 @@
                                         <div class="uicon-edit-color-picker">
                                             <div class="color-picker-wrapper" id="uicon-color-picker-wrapper"
                                                 data-id="6422650" role="button" aria-label="toggle color picker dialog"
-                                                style="transition: none 0s ease 0s; color: rgb(55, 73, 87);"></div>
-                                            <div class="pcr-app" data-theme="classic" aria-label="color picker dialog"
-                                                role="window" style="left: 555px; top: 236.5px;">
-                                                <div class="pcr-selection">
-                                                    <div class="pcr-color-preview" style="display:none" hidden="">
-                                                        <button type="button" class="pcr-last-color"
-                                                            aria-label="use previous color"
-                                                            style="color: rgb(55, 73, 87);"></button>
-                                                        <div class="pcr-current-color" style="color: rgb(55, 73, 87);">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="pcr-color-palette">
-                                                        <div class="pcr-picker"
-                                                            style="left: calc(36.7816% - 9px); top: calc(65.8824% - 9px); background: rgb(55, 73, 87);">
-                                                        </div>
-                                                        <div class="pcr-palette" tabindex="0"
-                                                            aria-label="color selection area" role="listbox"
-                                                            style="background: linear-gradient(to top, rgb(0, 0, 0), transparent), linear-gradient(to left, rgb(0, 143, 255), rgb(255, 255, 255));">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="pcr-color-chooser">
-                                                        <div class="pcr-picker"
-                                                            style="top: calc(57.2917% - 9px); background-color: rgb(0, 143, 255);">
-                                                        </div>
-                                                        <div class="pcr-hue pcr-slider" tabindex="0"
-                                                            aria-label="hue selection slider" role="slider"></div>
-                                                    </div>
-
-                                                    <div class="pcr-color-opacity" style="display:none" hidden="">
-                                                        <div class="pcr-picker"></div>
-                                                        <div class="pcr-opacity pcr-slider" tabindex="0"
-                                                            aria-label="selection slider" role="slider"></div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="pcr-swatches "><button type="button"
-                                                        style="color: rgba(55, 73, 87, 1)" aria-label="color swatch"
-                                                        disabled="" class="pcr-active"></button></div>
-
-                                                <div class="pcr-interaction">
-                                                    <input class="pcr-result" type="text" spellcheck="false"
-                                                        aria-label="color input field" maxlength="7">
-
-                                                    <input class="pcr-type active" data-type="HEXA" value="HEXA"
-                                                        type="button" style="display:none" hidden="">
-                                                    <input class="pcr-type" data-type="RGBA" value="RGBA" type="button"
-                                                        style="display:none" hidden="">
-                                                    <input class="pcr-type" data-type="HSLA" value="HSLA" type="button"
-                                                        style="display:none" hidden="">
-                                                    <input class="pcr-type" data-type="HSVA" value="HSVA" type="button"
-                                                        style="display:none" hidden="">
-                                                    <input class="pcr-type" data-type="CMYK" value="CMYK" type="button"
-                                                        style="display:none" hidden="">
-
-                                                    <input class="pcr-save" value="Save" type="button"
-                                                        style="display:none" hidden="" aria-label="save and close">
-                                                    <input class="pcr-cancel" value="Cancel" type="button"
-                                                        style="display:none" hidden="" aria-label="cancel and close">
-                                                    <input class="pcr-clear" value="Clear" type="button"
-                                                        style="display:none" hidden="" aria-label="clear and close">
-                                                </div>
+                                                style="transition: none 0s ease 0s; color: rgb(55, 73, 87);">
                                             </div>
+                                            
+                                        <div class="color-picker"></div>
                                         </div>
+
                                         <div class="uicon-detail-holder">
                                         </div>
                                     </div>
@@ -301,7 +249,7 @@
                                                     <span style="color:#080808;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;.</span><span style="color:#00627A;">width</span><span style="color:#080808;">(</span><span style="color:#164FEF;">15</span><span style="color:#080808;">.</span><span style="color:#860F93;">dp</span><span style="color:#080808;">)</span>
                                                     <span style="color:#080808;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;.</span><span style="color:#00627A;">height</span><span style="color:#080808;">(</span><span style="color:#164FEF;">15</span><span style="color:#080808;">.</span><span style="color:#860F93;">dp</span><span style="color:#080808;">),</span>
                                                     <span style="color:#4A86E8;">&emsp;&emsp;&emsp;type =&ensp;</span><span style="color:#080808;">R.drawable.</span><span id="icon-type" style="color:#860F93;">fi_rr_envelope</span><span style="color:#080808;">,</span>
-                                                    <span style="color:#4A86E8;">&emsp;&emsp;&emsp;color =</span><span style="color:#00627A;">&ensp;Color</span><span style="color:#080808;">(</span><span style="color:#1750EB;">0xFF00FF00</span><span style="color:#080808;">)</span>
+                                                    <span style="color:#4A86E8;">&emsp;&emsp;&emsp;color =</span><span style="color:#00627A;">&ensp;Color</span><span style="color:#080808;">(</span><span id="selectedColor" style="color:#1750EB;">0xFF00FF00</span><span style="color:#080808;">)</span>
                                                     <span style="color:#080808;">)</span>
                                                 </code>
                                                 <input id="uicons-code" type="hidden"
@@ -349,7 +297,8 @@
                                             <span class="tooltip tooltip--bottom">
                                                 <a
                                                     class="button pd-lv2 mg-right-lv2  track tooltip__trigger tooltip__trigger--always">
-                                                    <img id="similar-icons-bs" src="https://cdn-icons-png.flaticon.com/128/3917/3917000.png"
+                                                    <img id="similar-icons-bs"
+                                                        src="https://cdn-icons-png.flaticon.com/128/3917/3917000.png"
                                                         width="24" height="24" data-stories_space_upload_el_handled="1">
                                                 </a>
                                                 <div class="tooltip__content">
@@ -359,7 +308,8 @@
                                             <span class="tooltip tooltip--bottom">
                                                 <a
                                                     class="button pd-lv2 mg-right-lv2  track tooltip__trigger tooltip__trigger--always">
-                                                    <img id="similar-icons-rs" src="https://cdn-icons-png.flaticon.com/128/3917/3917035.png"
+                                                    <img id="similar-icons-rs"
+                                                        src="https://cdn-icons-png.flaticon.com/128/3917/3917035.png"
                                                         width="24" height="24" data-stories_space_upload_el_handled="1">
                                                 </a>
                                                 <div class="tooltip__content">
@@ -369,7 +319,8 @@
                                             <span class="tooltip tooltip--bottom">
                                                 <a
                                                     class="button pd-lv2 mg-right-lv2 active  track tooltip__trigger tooltip__trigger--always">
-                                                    <img id="similar-icons-sr" src="https://cdn-icons-png.flaticon.com/128/3917/3917051.png"
+                                                    <img id="similar-icons-sr"
+                                                        src="https://cdn-icons-png.flaticon.com/128/3917/3917051.png"
                                                         width="24" height="24" data-stories_space_upload_el_handled="1">
                                                 </a>
                                                 <div class="tooltip__content">
@@ -379,7 +330,8 @@
                                             <span class="tooltip tooltip--bottom">
                                                 <a
                                                     class="button pd-lv2 mg-right-lv2  track tooltip__trigger tooltip__trigger--always">
-                                                    <img id="similar-icons-rr" src="https://cdn-icons-png.flaticon.com/128/3917/3917058.png"
+                                                    <img id="similar-icons-rr"
+                                                        src="https://cdn-icons-png.flaticon.com/128/3917/3917058.png"
                                                         width="24" height="24" data-stories_space_upload_el_handled="1">
                                                 </a>
                                                 <div class="tooltip__content">
@@ -389,7 +341,8 @@
                                             <span class="tooltip tooltip--bottom">
                                                 <a
                                                     class="button pd-lv2 mg-right-lv2  track tooltip__trigger tooltip__trigger--always">
-                                                    <img id="similar-icons-ss" src="https://cdn-icons-png.flaticon.com/128/3917/3917110.png"
+                                                    <img id="similar-icons-ss"
+                                                        src="https://cdn-icons-png.flaticon.com/128/3917/3917110.png"
                                                         width="24" height="24" data-stories_space_upload_el_handled="1">
                                                 </a>
                                                 <div class="tooltip__content">
@@ -399,7 +352,8 @@
                                             <span class="tooltip tooltip--bottom">
                                                 <a
                                                     class="button pd-lv2 mg-right-lv2  track tooltip__trigger tooltip__trigger--always">
-                                                    <img id="similar-icons-br" src="https://cdn-icons-png.flaticon.com/128/3917/3917747.png"
+                                                    <img id="similar-icons-br"
+                                                        src="https://cdn-icons-png.flaticon.com/128/3917/3917747.png"
                                                         width="24" height="24" data-stories_space_upload_el_handled="1">
                                                 </a>
                                                 <div class="tooltip__content">
@@ -534,7 +488,9 @@
             </symbol>
         </svg>
 
+        <script src="./js/pickr.min.js"></script>
         <script src="./js/jquery-3.6.0.min.js"></script>
+        <script src="./js/icon-color-filter.js"></script>
         <script src="./js/script.js"></script>
 </body>
 
